@@ -10,10 +10,12 @@ constructor(){
 
     }
 }
+componentDidMount(){setInterval(()=>this.setState({count:this.state.count+1}),1000)}
 render(){
     return(
         <div className="center">
-            <h1>{this.state.fullName}</h1>
+            <h2>{this.state.count}</h2>       
+        <h1>{this.state.fullName}</h1>
         <img className="image" src='frida.png'/>
         <p>{this.state.bio}</p>
         <h3>{this.state.profession}</h3>
